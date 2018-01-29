@@ -24,3 +24,17 @@
 .bt-login {
   margin-bottom: 4vh;
 }
+/*Estilos del perfil del usuario*/
+#container-profile {
+  display: block;
+  border: 2px solid green;
+}
+.img-us {
+  width: 100px;
+}
+.name-us {
+  color: red;
+}
+.email-us {
+  color: orange;
+}
