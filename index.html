@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/gif" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red social</title>
+  </head>
+  <body>
+    <section class= "login">
+      <h3>Inicia sesión</h3>
+      <button id="login" name="login">Inicia con Google</button>
+    </section>
+
+    <section id="welcome">
+      <h1>Bienvenido</h1>
+
+    </section>
+
+    <section id="profile">
+
+    </section>
+
+
+
+
+<!--Agregando CDN de jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+<!--Agregando Firebase-->
+      <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAjnBkL58MpI9PyVtecRQsAZwcTfIpjQ8A",
+          authDomain: "red-social-sprint3.firebaseapp.com",
+          databaseURL: "https://red-social-sprint3.firebaseio.com",
+          projectId: "red-social-sprint3",
+          storageBucket: "red-social-sprint3.appspot.com",
+          messagingSenderId: "939504860046"
+        };
+        firebase.initializeApp(config);
+      </script>
+<!--Agregando archivo de javascript-->
+    <script src="js/app.js"></script>
+  </body>
+</html>
