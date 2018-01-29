@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/gif" href="#" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,9 +11,37 @@
     <title>Red social</title>
   </head>
   <body>
-    <section class= "login">
-      <h3>Inicia sesión</h3>
-      <button id="login" name="login">Inicia con Google</button>
+    <section class= "conteiner login">
+        <div class="col-sm-12 col-md-12 text-center">
+
+          <div class="row">
+            <img class="logo" src="assets/images/logo.png" alt="logo">
+            <h3>Inicia sesión</h3>
+          </div>
+
+          <div class="row">
+            <form class="col-sm-12 col-md-offset-3 col-md-6">
+              <div class="col-sm-4 col-md-12 form-group" id="dsp">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control dsp" id="exampleInputEmail1" placeholder="Email">
+              </div>
+              <div class="col-sm-4 col-md-12 form-group" id="dsp">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control dsp" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <button type="submit" class="col-sm-12 col-md-offset-3 col-md-6 btn btn-success bt-login" >LOGIN</button>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-offset-3 col-md-6">
+              <button id="login" type="button" class="btn btn-primary btn-lg btn-block" name="login">Login with Google</button>
+              <button id="login" type="button" class="btn btn-default btn-lg btn-block"  name="login">Login with Faceboock</button>
+              <button id="login" type="button" class="btn btn-default btn-lg btn-block "  name="login"> Login with Twitter</button>
+            </div>
+          </div>
+
+        </div>
     </section>
 
     <section id="welcome">
@@ -47,6 +76,10 @@
         };
         firebase.initializeApp(config);
       </script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <!--Agregando archivo de javascript-->
     <script src="js/app.js"></script>
   </body>
