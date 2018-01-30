@@ -5,6 +5,7 @@ $('#login').click(serviceGoogle);
 //Guardando datos en Firebase cuando se da click en Guardar.
 $('#guardar').click(saveFirebase);
 
+
 function serviceGoogle () {
   firebase.auth()//Mandando a llamar a Firebase.
   .signInWithPopup(provider)//Ventana popup para logearse con la var provider (con google).
@@ -48,11 +49,15 @@ function paintProfile (user) {
 
 //Función que guarda datos al hacer click en guardar.
 function saveFirebase () {
+  console.log($('#text-area').val());
   firebase.database().ref('us1')
     .set({
           edad:'15años',
           sexo: 'Feme'
           })//Escribiendo en la base de datos.
+
+  //text area
+  $('#text-area').val();
 }
 /*function saveText () {
   var publications = $.post['text'];

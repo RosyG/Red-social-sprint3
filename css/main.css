@@ -4,7 +4,7 @@
 }
 
 #welcome {
-  display: none;
+  display: block; /*vista ocutada*/
 }
 
 /* circular style logo */
@@ -32,13 +32,13 @@
 
 #login1 {
  background-color: rgb(57, 84, 161);
- border: none;
+ border: block;
  color: #fff;
 }
 
 #login2 {
  background-color: rgb(29, 161, 242);
- border: none;
+ border: block;/
  color: #fff;
 }
 
