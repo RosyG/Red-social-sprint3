@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/gif" href="#" />
@@ -20,48 +21,112 @@
           </div>
 
           <div class="row">
-            <form class="col-sm-12 col-md-offset-3 col-md-6">
-              <div class="col-sm-4 col-md-12 form-group" id="dsp">
+            <form class="col-xs-12 col-md-offset-3 col-md-6">
+              <div class="col-xs-12 col-md-12 form-group" id="dsp">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control dsp" id="exampleInputEmail1" placeholder="Email">
               </div>
-              <div class="col-sm-4 col-md-12 form-group" id="dsp">
+              <div class="col-xs-12 col-md-12 form-group" id="dsp">
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control dsp" id="exampleInputPassword1" placeholder="Password">
               </div>
-              <button type="submit" class="col-sm-12 col-md-offset-3 col-md-6 btn btn-success bt-login" >LOGIN</button>
+              <button type="submit" class="col-xs-12 col-md-offset-3 col-md-6 btn btn-success bt-login" >LOGIN</button>
             </form>
           </div>
 
           <div class="row">
-            <div class="col-sm-12 col-md-offset-3 col-md-6">
+            <div class="col-xs-12 col-md-offset-3 col-md-6">
               <button id="login" type="button" class="btn btn-primary btn-lg btn-block" name="login">Login with Google</button>
               <button id="login1" type="button" class="btn btn-default btn-lg btn-block"  name="login">Login with Faceboock</button>
               <button id="login2" type="button" class="btn btn-default btn-lg btn-block "  name="login"> Login with Twitter</button>
             </div>
           </div>
-
         </div>
     </section>
 
     <section id="welcome">
-      <h1 id="welcome-user"></h1>
-      <textarea id="text-area" placeholder="Escribe tu historia" name="text" rows="10" cols="100"></textarea>
-      <button id="guardar">Guardar</button>
-    </section>
 
-    </section>
+      <nav class="navbar navbar-default ">
+        <div class="container-fluid ">
+          <!-- mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="img-log" src="assets/images/logo.png" alt="logo"></a>
+          </div>
 
-    <section id="container-profile">
-      <h3 id="name" class = 'name-us'></h3>
-      <h3 id="email" class = 'email-us'></h3>
+          <!--  menu-->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav  navbar-right">
+              <li><a href="#">Notificacion</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Mi perfil</a></li>
+                  <li><a href="#">Chat</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Contactos</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Configuracion</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
 
-    </section>
+      <section class="conteiner">
+        <!-- imagen fondo -->
+        <div class="">
+          <div class="col-xs-12 col-md-12 bg-img text-center">
+            <div class="col-xs-12 col-md-12 ">
+              <p class="col-xs-12 tx">"Ayudar a los demás es como ayudarse a sí mismo"</p>
+            </div>
+           </div>
+        </div>
+
+        <!--contenedor textarea  -->
+        <div class="">
+          <div class="col-xs-12 col-md-12">
+            <div class="col-xs-offset-1 col-xs-3 col-md-offset-1 col-md-3">
+              <img src="http://dummyimage.com/300x200" alt="">
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <h1 id="welcome-user"></h1>
+              <textarea class="col-xs-12"id="text-area" placeholder="Escribe tu historia" name="text" rows="7"></textarea>
+              <button id="guardar">Guardar</button>
+            </div>
+            <div class="col-xs-2 col-md-2">
+              <!--iconos  -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      </section>
+
+
+      <section id="container-profile">
+        <h3 id="name" class = 'name-us'></h3>
+        <h3 id="email" class = 'email-us'></h3>
+      </section>
 
     <section id="container-follows">
 
 
     </section>
+
+
 
 
 <!--Agregando CDN de jQuery-->
