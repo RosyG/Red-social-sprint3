@@ -25,10 +25,10 @@ function serviceGoogle () {
 
     $('#welcome-user').text('Bienvenid@ ' + result.user.displayName);//Añadiendo nombre de usuario para concatenar.
     //Guardando la información del usuario en la base de datos de Firebase.
-//    saveUs (result.user);//Guada la información del usuario de manera automatica.
+    //saveUs (result.user);//Guada la información del usuario de manera automatica.
     paintProfile (result.user);//Pinta los datos del usuario en su perfil.
-//    saveData (result.user);
-//    paintTextPublication (textPublication);//Ejecutando la función que pintará las publicationes guardadas en Firebase.
+    //saveData (result.user);
+    //paintTextPublication (textPublication);//Ejecutando la función que pintará las publicationes guardadas en Firebase.
 
   });
 };

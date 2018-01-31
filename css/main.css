@@ -1,3 +1,4 @@
+/* style reutilizables */
 * {
   font-family: 'Montserrat', sans-serif;
 }
@@ -6,22 +7,28 @@ i {
   margin: 2vh;
 }
 
-/* boton con icono */
+/* button icono */
 #bs-example-navbar-collapse-1 > form > button {
   height: 5.5vh;
   padding: 0vh;
   width: 5vw;
 }
-
+/*button section menu  */
 #bs-example-navbar-collapse-1 > ul > button {
   height: 5.5vh;
   padding: 0vh;
   margin-top: 2vh;
-  width: 8vw;
+  width: 10vw;
 }
 /*iconos perfil  */
 .icon {
   color: #fff;
+}
+
+ .backPrincipal {
+  border: none;
+  border: 1px solid #fff;
+  background-color: blue;
 }
 /*section login */
 #dsp {
