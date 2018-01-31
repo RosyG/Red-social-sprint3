@@ -5,7 +5,7 @@ El principal objetivo es encontrar a muchas personas con las que podamos trasmit
 Creamos una red social en la que tenemos el placer de conocer personas increíbles con las que podremos compartir nuestras historias, escucharlas o verlas e informar de lugares a donde poder acudir a recibir más información, ayuda.
 Podremos conocer o recomendar instituciones de apoyo, asistir a eventos sociales.
 
-# No se trata solamente de tecnología. Es hora de romper paradigmas y utilizar la creatividad para adaptarnos a las necesidades de las personas, desde los hospitales hasta los rincones más remotos.Pero, como es evidente, queda muchísimo por hacer. Mientras más conozcamos sobre los retos de la salud, más proactivos podemos ser para brindar una respuesta oportuna, compartir videos, fotos, chat en tiempo real.
+# No se trata solamente de tecnología. Es hora de romper paradigmas y utilizar la creatividad para adaptarnos a las necesidades de las personas, desde los hospitales hasta los rincones más remotos.Pero, como es evidente, queda muchísimo por hacer. Mientras más conozcamos sobre los retos de la salud, más proactivos podemos ser para brindar una respuesta oportuna utilizando texto, videos, fotos, chat en tiempo real.
 
 
 # "TU COMO YO"
@@ -88,3 +88,21 @@ Nos permitio conocer el principal objetivo
 
 
 ![imagen ](assets/images/perfil.png)
+
+
+En este producto utilizamos FIREBASE para el dinamismo de esta red sociales.
+
+1. Login con gmail
+2. Almacenar y escribir en tiempo realizar
+3. Leer y mostramos datos del usuario en perfil:
+nombre, cuenta de usuario y nuevas publicaciones
+4. Actualizar las publicaciomes en la base de firebase
+
+
+ <!--Dificultad para poder hacer hosting y para poder leer la base de datos. -->
+
+
+ COLABORADORAS
+
+ Rosa María García Aguilar
+ Nancy Santana Hernández
