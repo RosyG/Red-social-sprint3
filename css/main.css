@@ -160,5 +160,28 @@ i {
 
 #img-perfil {
   border-radius: 50vw;
+
+}
+/*Estilos de la ventana de notificaciones*/
+#container-profile {
   display: none;
+}
+.backPrincipal {
+  background-color: transparent;
+}
+/*Estilos de las publicaciones*/
+#publications > div > label {
+  /*color: brown;*/
+  color: #7CB5CD;
+  font-size: 1.7em;
+  font-weight: 900;
+
+}
+
+#publications > div {
+/*  background-color: gainsboro;
+    border-bottom: 1.5em solid #2BBBAD;*/
+  background-color: #F5F2F0;
+  border-bottom: 1.5em solid #A8A8A8;
+
 }

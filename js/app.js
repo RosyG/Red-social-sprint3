@@ -1,9 +1,17 @@
 //login, la var provider provera el servicio para logear.
 var provider = new firebase.auth.GoogleAuthProvider();
 //Se llama al botón login para darle el evento click.
-$('#login').click(serviceGoogle);
+$('#login').click(serviceGoogle);//Logea los datos que introduzca el usuario.
 //Guardando datos en Firebase cuando se da click en Guardar.
-$('#guardar').click(saveFirebase);
+$('#guardar').click(saveFirebase);//Guarda en Firebase las nuevas actualizaciones.
+
+$('#myProfile').click(showProfile);//Muestra el perfil del usuario.
+
+$('#out').click(showLogin);//Muestra el login.
+
+$('.backPrincipal').click(showPrincipal);//Muestra la página principal.
+
+$('#notification').click(showNotifications);//Muestra las notificaciones recientes.
 
 
 function serviceGoogle () {
@@ -13,11 +21,13 @@ function serviceGoogle () {
     //En este momento el us ya accedio.
     $('.login').hide();//Ocultado la ventana de logear.
     $('#welcome').show('slow');//Mostrando la pantalla principal.
+    $('#container-notifications').hide();//Oculta la ventana de notificaciones.
+
     $('#welcome-user').text('Bienvenid@ ' + result.user.displayName);//Añadiendo nombre de usuario para concatenar.
     //Guardando la información del usuario en la base de datos de Firebase.
 //    saveUs (result.user);//Guada la información del usuario de manera automatica.
     paintProfile (result.user);//Pinta los datos del usuario en su perfil.
-    saveData (result.user)
+//    saveData (result.user);
 //    paintTextPublication (textPublication);//Ejecutando la función que pintará las publicationes guardadas en Firebase.
 
   });
@@ -42,12 +52,10 @@ function paintProfile (user) {
   var nameUser = user.displayName;
   var email = user.email;
   var uid= user.uid;
-  console.log(imgUser);
-  $('#container-profile').append("<img  class = 'img-us' src = '"+imgUser+"' />");
-  console.log(nameUser);
-  console.log(email);
+  $('.bg-perfil').append("<img id='img-perfil'  class = 'img-us' src = '"+imgUser+"' />");
   $('#name').text(nameUser);
   $('#email').text(email);
+
 }
 
 //Función que guarda datos al hacer click en guardar.
@@ -68,8 +76,8 @@ function saveFirebase () {
 function saveText (textPublication) {
   firebase.database().ref('publications')
     .push(textPublication)//Añadiendo la publicación en la rama 'publications'.
-  paintTextPublication (textPublication);//Ejecutando la función que pintará las publicationes guardadas en Firebase.
-  dataPublications.push(textPublication);//Guardando la publicación en la data.
+  dataPublications.push(textPublication);//Guardando la publicación en la data local.
+  $('#notification').click(paintTextPublication (textPublication));//Ejecutando la función que pintará las publicationes guardadas en Firebase.
 
 }
 function cleanText () {
@@ -88,6 +96,8 @@ function paintTextPublication (text) {
   //Función que publica en la zona de las publicaciones de los usuarios.
   var database1 = firebase.database().ref("publications").once("value").then(function(snapshot){
     var obj = snapshot.val()
+    console.log('a borrar');
+      $('#publications').empty();
     for (var key in obj) {
       createElemen (obj[key]);//Mandando a pintar cada elemento que contiene el objeto de las publicaciones.
       console.log(obj[key]);
@@ -102,11 +112,11 @@ function createElemen (texto) {
   containerText.append(textUs);
   textUs.innerHTML = texto;
   containerText.append(textUs);
-//  newsfeed
-  $('#container-follows').append(containerText);
+
+  $('#publications').prepend(containerText);
 }
 
-function saveData (user) {
+/*function saveData (user) {
   var objUser = {
     uid:user.uid,
     name:user.displayName,
@@ -117,4 +127,29 @@ function saveData (user) {
   console.log(dataUsers);
   console.log(objUser);
   console.log('data impresa');
+}
+*/
+function showProfile () {
+  $('#welcome').hide();//Ocultado la ventana de logear.
+  $('#container-profile').show('slow');//Mostrando la pantalla del perfil del us.
+}
+
+function showLogin () {
+  $('#welcome').hide();//Ocultado la ventana de principal.
+  $('#container-profile').hide();//Mostrando la pantalla del perfil del us.
+  $('#container-notifications').hide();//Oculta la ventana de notificaciones.
+  $('.login').show('slow');//Muestra la ventana de logear.
+}
+
+function showPrincipal () {
+  $('#container-profile').hide();//Mostrando la pantalla del perfil del us.
+  $('.login').hide();//Ocultado la ventana de logear.
+  $('#container-notifications').hide();//Oculta la ventana de notificaciones.
+  $('#welcome').show('slow');//Muestra la página principal.
+}
+
+function showNotifications () {
+  $('#welcome').hide();//Ocultado la ventana de principal.
+  $('#container-profile').hide();//Mostrando la pantalla del perfil del us.
+  $('#container-notifications').show('slow');//Muestra la ventana de notificaciones.
 }
