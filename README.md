@@ -50,7 +50,7 @@ Propuesta de red social
 
 
 
-![imagen](../assets/images/skc.png)
+![imagen](assets/images/skc.png)
 
 
 
@@ -58,22 +58,33 @@ Propuesta de red social
 
 Nos permitio conocer el principal objetivo
 
-![imagen ](../assets/images/1.png)
+![imagen ](assets/images/1.png)
 
 
 
-![imagen ](../assets/images/2.png)
+![imagen ](assets/images/2.png)
 
 
 
-![imagen ](../assets/images/3.png)
+![imagen ](assets/images/3.png)
 
 
 
-![imagen ](../assets/images/4.png)
+![imagen ](assets/images/4.png)
 
 
 
 
 
 # Producto final
+
+
+![imagen ](assets/images/inicio.png)
+
+
+
+![imagen ](assets/images/redSocial.png)
+
+
+
+![imagen ](assets/images/perfil.png)
