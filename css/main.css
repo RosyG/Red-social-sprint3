@@ -1,6 +1,28 @@
 * {
   font-family: 'Montserrat', sans-serif;
 }
+
+i {
+  margin: 2vh;
+}
+
+/* boton con icono */
+#bs-example-navbar-collapse-1 > form > button {
+  height: 5.5vh;
+  padding: 0vh;
+  width: 5vw;
+}
+
+#bs-example-navbar-collapse-1 > ul > button {
+  height: 5.5vh;
+  padding: 0vh;
+  margin-top: 2vh;
+  width: 8vw;
+}
+/*iconos perfil  */
+.icon {
+  color: #fff;
+}
 /*section login */
 #dsp {
   display: block;
@@ -21,6 +43,7 @@
 .login {
   background-color: rgba(209, 209, 209, 0.2);
   height: 100vh;
+  display: none;
 }
 
 /* button login */
@@ -48,23 +71,15 @@
 
 /* estilos red social */
 
-a > img {
-  border-radius: 100vw;
-  /* margin-bottom: 100px; */
-  width: 100px;
-}
 
 /* fondo de menu */
 #welcome > nav {
   background-color: rgb(136, 255, 0);
   margin: 0px;
-  height:  20vh;
 }
 
 /*barra de menu  */
-#bs-example-navbar-collapse-1 {
-  padding: 5vh;
-}
+
 /* imagen fondo red */
 .bg-img {
   background-image: url("../assets/images/red.png");
@@ -105,18 +120,44 @@ a > img {
 /*Estilos del perfil del usuario*/
 #container-profile {
   display: block;
-  border: 2px solid green;
+}
+
+/* background section perfil */
+.bg-user {
+  background-image: url("../assets/images/img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* frace perfil */
+.style {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 900;
+  text-shadow: 3px 5px 5px #ef0e0e;
+}
+/* background del fondo de foto */
+.bg-perfil {
+  background-color: rgba(118, 212, 217,0.8);
+}
+
+.p-frace {
+  font-size: 2.8em;
 }
 .img-us {
   width: 100px;
 }
 .name-us {
   color: red;
+  font-size: 3em;
+  font-weight: 900;
 }
 .email-us {
-  color: orange;
+  color: blue;
+  font-weight: 900;
 }
 
- /* #welcome {
-   background-color: rgba(209, 209, 209, 0.1);
- } */
+#img-perfil {
+  border-radius: 50vw;
+}
