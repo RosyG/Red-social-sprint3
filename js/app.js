@@ -6,7 +6,6 @@ $('#login').click(serviceGoogle);
 $('#guardar').click(saveFirebase);
 
 
-
 function serviceGoogle () {
   firebase.auth()//Mandando a llamar a Firebase.
   .signInWithPopup(provider)//Ventana popup para logearse con la var provider (con google).
@@ -19,6 +18,8 @@ function serviceGoogle () {
 //    saveUs (result.user);//Guada la información del usuario de manera automatica.
     paintProfile (result.user);//Pinta los datos del usuario en su perfil.
     saveData (result.user)
+//    paintTextPublication (textPublication);//Ejecutando la función que pintará las publicationes guardadas en Firebase.
+
   });
 };
 //Función que guarda automaticamente.
@@ -85,23 +86,26 @@ firebase.database().ref('usuarios')
 ///--------------------------publicación de las actividades del usuario.
 function paintTextPublication (text) {
   //Función que publica en la zona de las publicaciones de los usuarios.
-    $('#container-follows').append("<div  id = 'container-text' />");
-    $('#container-text').append('<label id = "text-us" />');
-    var paintText = $('#text-us');
-    //$('#text-us').text(text);
+  var database1 = firebase.database().ref("publications").once("value").then(function(snapshot){
+    var obj = snapshot.val()
+    for (var key in obj) {
+      createElemen (obj[key]);//Mandando a pintar cada elemento que contiene el objeto de las publicaciones.
+      console.log(obj[key]);
+    }
+  });
+}//Fin de paintTextPublication.
 
-    var database = firebase.database().ref('publications').child('-L44GKvTNdg8fNVvyVW7');//Tengo que especificar a su hijo, como iterar para q lo entienda firebase.
-      database.on('value', function (snapshot) {
-        paintText.text(snapshot.val());
-        console.log(paintText);
-      })
+function createElemen (texto) {
+  var containerText = document.createElement('div');
+  var textUs = document.createElement('label');
 
-
-
-
-    console.log($('#container-follows'));
-
+  containerText.append(textUs);
+  textUs.innerHTML = texto;
+  containerText.append(textUs);
+//  newsfeed
+  $('#container-follows').append(containerText);
 }
+
 function saveData (user) {
   var objUser = {
     uid:user.uid,
